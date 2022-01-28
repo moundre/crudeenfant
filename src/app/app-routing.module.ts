@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'accueil',
+    loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
+  },
+  {
+    path: 'ajout',
+    loadChildren: () => import('./ajout/ajout.module').then( m => m.AjoutPageModule)
+  },
+  {
+    path: 'modification',
+    loadChildren: () => import('./modification/modification.module').then( m => m.ModificationPageModule)
+  },
+  {
+    path: 'suppression',
+    loadChildren: () => import('./suppression/suppression.module').then( m => m.SuppressionPageModule)
+  },
+  {
+    path: 'liste',
+    loadChildren: () => import('./liste/liste.module').then( m => m.ListePageModule)
+  },
 ];
 
 @NgModule({
